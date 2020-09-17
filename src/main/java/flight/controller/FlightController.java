@@ -25,8 +25,8 @@ public class FlightController {
     public Boolean isTicketAvailable(@PathVariable("id") long ticketId) {
         return flightServices.isTicketAvailable(ticketId);
     }
-    @GetMapping("/is-ticket-available/{destination-id}/{baggage-id}")
-    public Boolean isTicketAvailable(@PathVariable("destination-id") Long destinationId,
+    @GetMapping("/is-baggage-check-in/{destination-id}/{baggage-id}")
+    public Boolean isBaggageCheckIn(@PathVariable("destination-id") Long destinationId,
                                      @PathVariable("baggage-id") String baggageId) {
         return flightServices.isBaggageCheckIn(destinationId,baggageId);
     }
